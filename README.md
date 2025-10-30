@@ -350,12 +350,119 @@ print("\nFeature importance plot saved as 'feature_importance.png'")
 plt.show()
 ```
 
-## HW2
+## Results
 
 Train and evaluate logistic model, Yolov5:
 
 ```bash
-from PIL import Image  # Import the Image module from Pillow
+Dataset Shape: (178, 13)
+
+Feature Names: ['alcohol', 'malic_acid', 'ash', 'alcalinity_of_ash', 'magnesium', 'total_phenols', 'flavanoids', 'nonflavanoid_phenols', 'proanthocyanins', 'color_intensity', 'hue', 'od280/od315_of_diluted_wines', 'proline']
+
+Target Classes: ['class_0' 'class_1' 'class_2']
+
+First few rows:
+   alcohol  malic_acid   ash  alcalinity_of_ash  magnesium  total_phenols  \
+0    14.23        1.71  2.43               15.6      127.0           2.80   
+1    13.20        1.78  2.14               11.2      100.0           2.65   
+2    13.16        2.36  2.67               18.6      101.0           2.80   
+3    14.37        1.95  2.50               16.8      113.0           3.85   
+4    13.24        2.59  2.87               21.0      118.0           2.80   
+
+   flavanoids  nonflavanoid_phenols  proanthocyanins  color_intensity   hue  \
+0        3.06                  0.28             2.29             5.64  1.04   
+1        2.76                  0.26             1.28             4.38  1.05   
+2        3.24                  0.30             2.81             5.68  1.03   
+3        3.49                  0.24             2.18             7.80  0.86   
+4        2.69                  0.39             1.82             4.32  1.04   
+
+   od280/od315_of_diluted_wines  proline  target  
+0                          3.92   1065.0       0  
+1                          3.40   1050.0       0  
+2                          3.17   1185.0       0  
+3                          3.45   1480.0       0  
+4                          2.93    735.0       0  
+
+==================================================
+LOGISTIC REGRESSION MODEL
+==================================================
+
+Accuracy: 0.9814814814814815
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     class_0       0.95      1.00      0.97        18
+     class_1       1.00      0.95      0.98        21
+     class_2       1.00      1.00      1.00        15
+
+    accuracy                           0.98        54
+   macro avg       0.98      0.98      0.98        54
+weighted avg       0.98      0.98      0.98        54
+
+
+Confusion Matrix:
+[[18  0  0]
+ [ 1 20  0]
+ [ 0  0 15]]
+
+==================================================
+DECISION TREE MODEL
+==================================================
+
+Accuracy: 0.9629629629629629
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     class_0       1.00      0.94      0.97        18
+     class_1       0.91      1.00      0.95        21
+     class_2       1.00      0.93      0.97        15
+
+    accuracy                           0.96        54
+   macro avg       0.97      0.96      0.96        54
+weighted avg       0.97      0.96      0.96        54
+
+
+Confusion Matrix:
+[[17  1  0]
+ [ 0 21  0]
+ [ 0  1 14]]
+
+Decision tree visualization saved as 'decision_tree.png'
+```
+
+Load my Image:
+
+```bash
+image_path = os.path.join(os.path.expanduser('~'), 'Downloads', 'Joshua.jpeg')
+image = image_path
+
+# Resize the image
+resized_image = image
+
+# Convert the resized image to a format compatible with the model (e.g., NumPy array)
+# If your model requires a specific input format, you may need to adjust the image further.
+img_array = np.array(resized_image)
+
+# Perform inference
+results = model(resized_image)
+
+# Show results
+results.show()  # This will display the image with detections
+
+# If you want to visualize the resized image
+plt.imshow(resized_image)
+plt.axis('off')
+plt.title('Resized Image')
+plt.show()
+```
+
+### HW2 
+
+Train and evaluate logistic model, Yolov5:
+
+```from PIL import Image  # Import the Image module from Pillow
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_openml
@@ -436,25 +543,28 @@ import numpy as np
 
 # Load a pre-trained YOLOv5 model
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # Load YOLOv5s model (small)
-```
 
-Or with command-line arguments:
+image_path = os.path.join(os.path.expanduser('~'), 'Downloads', 'Joshua.jpeg')
+image = image_path
 
-```bash
-python main.py --input data.csv --output results.txt
-```
+# Resize the image
+resized_image = image
 
-### Configuration
+# Convert the resized image to a format compatible with the model (e.g., NumPy array)
+# If your model requires a specific input format, you may need to adjust the image further.
+img_array = np.array(resized_image)
 
-If your project has configuration options, explain them here:
+# Perform inference
+results = model(resized_image)
 
-```python
-# Example configuration
-CONFIG = {
-    'data_path': 'data/',
-    'output_format': 'json',
-    'verbose': True
-}
+# Show results
+results.show()  # This will display the image with detections
+
+# If you want to visualize the resized image
+plt.imshow(resized_image)
+plt.axis('off')
+plt.title('Resized Image')
+plt.show()
 ```
 
 ## Project Structure
