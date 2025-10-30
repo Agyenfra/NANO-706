@@ -560,42 +560,16 @@ plt.show()
 
 ```
 
-## Examples
-
-### Example 1: Basic Usage
-
-```python
-from src.main import process_data
-
-# Load and process data
-result = process_data('data/input.csv')
-print(f"Processing complete: {result}")
-```
-
-**Output:**
-```
-Processing complete: 100 records processed successfully
-```
-
-### Example 2: Advanced Usage
-
-```python
-from src.models import DataProcessor
-
-# Create processor with custom parameters
-processor = DataProcessor(threshold=0.5, verbose=True)
-processor.run()
-```
 
 ## Assignment Requirements
 
 ### Completed Requirements
 
-- [x] Requirement 1: Implement data loading functionality
-- [x] Requirement 2: Create data processing algorithm
-- [x] Requirement 3: Generate visualizations
-- [x] Requirement 4: Write unit tests
-- [x] Requirement 5: Document code with comments
+- [x] Requirement 1: Decision tree 
+- [x] Requirement 2: Logistic Regression
+- [x] Requirement 3: Prediction and Evaluation
+- [x] Requirement 4: Yolov5
+- [x] Requirement 5: Building Models
 
 ### Implementation Details
 
@@ -606,19 +580,6 @@ processor.run()
 - Implemented error handling for robust execution
 - Followed PEP 8 style guidelines
 
-## Testing
-
-Run the test suite:
-
-```bash
-python -m pytest tests/
-```
-
-Or for verbose output:
-
-```bash
-python -m pytest tests/ -v
-```
 
 ## Known Issues
 
