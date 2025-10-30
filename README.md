@@ -571,15 +571,6 @@ plt.show()
 - [x] Requirement 4: Yolov5
 - [x] Requirement 5: Building Models
 
-### Implementation Details
-
-**Algorithm Complexity**: O(n log n)
-
-**Key Design Decisions**:
-- Used object-oriented approach for better modularity
-- Implemented error handling for robust execution
-- Followed PEP 8 style guidelines
-
 
 ## Known Issues
 
