@@ -432,30 +432,16 @@ Confusion Matrix:
 Decision tree visualization saved as 'decision_tree.png'
 ```
 
-Load my Image:
+Images:
 
 ```bash
-image_path = os.path.join(os.path.expanduser('~'), 'Downloads', 'Joshua.jpeg')
-image = image_path
+<img width="953" height="402" alt="image" src="https://github.com/user-attachments/assets/86295236-6915-4034-a737-cef1be597721" />
 
-# Resize the image
-resized_image = image
+<img width="953" height="367" alt="image" src="https://github.com/user-attachments/assets/19f6012d-fe16-449d-b322-556d15c98d25" />
 
-# Convert the resized image to a format compatible with the model (e.g., NumPy array)
-# If your model requires a specific input format, you may need to adjust the image further.
-img_array = np.array(resized_image)
+<img width="953" height="645" alt="image" src="https://github.com/user-attachments/assets/465ae530-489a-4b83-906b-6b814ac9b1c2" />
 
-# Perform inference
-results = model(resized_image)
-
-# Show results
-results.show()  # This will display the image with detections
-
-# If you want to visualize the resized image
-plt.imshow(resized_image)
-plt.axis('off')
-plt.title('Resized Image')
-plt.show()
+<img width="953" height="531" alt="image" src="https://github.com/user-attachments/assets/470783dc-1bc6-45bd-9136-842f78ada4bf" />
 ```
 
 ### HW2 
