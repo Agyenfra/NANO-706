@@ -25,8 +25,9 @@ In HW2 I created a model in python, trained the model, analysed the model and se
 
 For HW1 the first part was to load a wine dataet and to visualize the data using a scatter plot.
 The second part was to use the dataset to create a model and evaluate the model. 
+The dataset for the logistic regression was to build a statistical model to predict the probability of a wine belonging to a specific quality category based on its chemical properties. This task was to classify the wine datasets based on their chemical properties.
 After training a data set of 124 with a testing set of 54, I obtained a training accuracy of 0.9839 and a testing acuracy of 1. 
-I was able to generate a Logistic regression with classification report, confusion matrix and feature importance graph. All these were plotted on a graph to make inferences.
+I was also able to generate a Logistic regression with classification report, confusion matrix and feature importance graph. 
 For HW2, I uploaded a MNIST dataset and trained a SVM on it. I also loaded and trained a MLP model for logistic regression and MLP Classifier. The training accuracy was 1. The logistic regreesion scored a 92.03%, Random Forest Accuracy was 96.71% and MLP Accuracy was 88.00%. I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used for predicting the bounding boxes and class probabilities of objects in input images.
 
 ## Features
