@@ -58,9 +58,9 @@ I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used
 - Python 3.9 or higher
 - pip package manager
 
-### Setup Instructions
+### HW1 
 
-1. Clone the repository:
+1. Load dataset and viualize scatter plot:
 ```bash
 git clone https://github.com/yourusername/assignment-name.git
 cd assignment-name
