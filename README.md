@@ -3,7 +3,9 @@
 [![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This assignment is in 2 folds. The first one lablled as HW1 and the second lablled as HW2.
+This assignment is in 2 folds. The first one lablled as HW1 and the second lablled as HW2. In HW1 we were to use a wine dataset to create a decison tree. 
+In HW2 we were to train a model, analyse the model and set up an enironment to visualize using yolov5.
+HW1 helps use to analyse a dataset by predicting and evaluating a model using python. It further uses a decison tree in evaluating a dataset.
 A brief, one-paragraph description of what this assignment accomplishes. Mention the main problem it solves or the concept it demonstrates.
 
 ## Table of Contents
