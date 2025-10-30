@@ -567,31 +567,11 @@ plt.title('Resized Image')
 plt.show()
 ```
 
-## Project Structure
+## Image
 
 ```
-assignment-name/
-│
-├── data/                   # Data files
-│   ├── input.csv
-│   └── sample_data.json
-│
-├── src/                    # Source code
-│   ├── __init__.py
-│   ├── main.py            # Main entry point
-│   ├── utils.py           # Utility functions
-│   └── models.py          # Data models/classes
-│
-├── tests/                  # Unit tests
-│   ├── test_main.py
-│   └── test_utils.py
-│
-├── docs/                   # Documentation
-│   └── report.pdf
-│
-├── requirements.txt        # Python dependencies
-├── README.md              # This file
-└── LICENSE                # License file
+<img width="1462" height="1296" alt="image" src="https://github.com/user-attachments/assets/9a11cd80-c8c4-418f-9b94-eb739f938f95" />
+
 ```
 
 ## Examples
