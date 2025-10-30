@@ -3,6 +3,7 @@
 [![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+This assignment is in 2 folds. The first one lablled as HW1 and the second lablled as HW2.
 A brief, one-paragraph description of what this assignment accomplishes. Mention the main problem it solves or the concept it demonstrates.
 
 ## Table of Contents
