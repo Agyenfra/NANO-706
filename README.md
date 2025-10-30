@@ -32,7 +32,7 @@ I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used
 ## Features
 
 - ✨ HW1 Feature 1: Load dataset and viualize scatter plot
-- 🚀 HW1 Feature 2: Train and evaluate model
+- 🚀 HW1 Feature 2: Prediction and Evaluation
 - 🎯 HW1 Feature 3: Classification report, Confusinon Matrix, Feature Importance graph. 
 - 📊 HW2 Feature 4: Train and evaluate logistic model, Yolov5
 
@@ -104,10 +104,121 @@ accuracy = accuracy_score(Y_test , Y_pred)
 print(f"Accuracy of the SVM model: {accuracy:.2f}")
 ```
 
-2. Create a virtual environment (optional but recommended):
+2. Prediction and Evaluation:
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_wine
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+import seaborn as sns
+
+# Load the wine dataset
+wine = load_wine()
+X = wine.data
+y = wine.target
+
+print("Dataset Information:")
+print(f"Number of samples: {X.shape[0]}")
+print(f"Number of features: {X.shape[1]}")
+print(f"Target classes: {wine.target_names}")
+print(f"Feature names: {wine.feature_names}\n")
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42, stratify=y
+)
+
+print(f"Training set size: {X_train.shape[0]}")
+print(f"Testing set size: {X_test.shape[0]}\n")
+
+# Create and train the Decision Tree Classifier
+dt_classifier = DecisionTreeClassifier(
+    max_depth=5,
+    min_samples_split=5,
+    min_samples_leaf=2,
+    random_state=42
+)
+dt_classifier.fit(X_train, y_train)
+
+# Make predictions
+y_pred_train = dt_classifier.predict(X_train)
+y_pred_test = dt_classifier.predict(X_test)
+
+# Evaluate the model
+train_accuracy = accuracy_score(y_train, y_pred_train)
+test_accuracy = accuracy_score(y_test, y_pred_test)
+
+print("=" * 50)
+print("MODEL EVALUATION")
+print("=" * 50)
+print(f"Training Accuracy: {train_accuracy:.4f}")
+print(f"Testing Accuracy: {test_accuracy:.4f}\n")
+
+# Classification report
+print("Classification Report (Test Set):")
+print(classification_report(y_test, y_pred_test, target_names=wine.target_names))
+
+# Confusion Matrix
+cm = confusion_matrix(y_test, y_pred_test)
+print("Confusion Matrix:")
+print(cm)
+
+# Feature importance
+feature_importance = dt_classifier.feature_importances_
+feature_names = wine.feature_names
+
+print("\nFeature Importance:")
+for name, importance in sorted(zip(feature_names, feature_importance), 
+                               key=lambda x: x[1], reverse=True):
+    if importance > 0:
+        print(f"{name}: {importance:.4f}")
+
+# Visualizations
+fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+
+# 1. Decision Tree visualization
+plot_tree(dt_classifier, 
+          feature_names=wine.feature_names,
+          class_names=wine.target_names,
+          filled=True,
+          ax=axes[0, 0],
+          fontsize=8)
+axes[0, 0].set_title("Decision Tree Structure", fontsize=14, fontweight='bold')
+
+# 2. Confusion Matrix heatmap
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
+            xticklabels=wine.target_names,
+            yticklabels=wine.target_names,
+            ax=axes[0, 1])
+axes[0, 1].set_title("Confusion Matrix", fontsize=14, fontweight='bold')
+axes[0, 1].set_ylabel('True Label')
+axes[0, 1].set_xlabel('Predicted Label')
+
+# 3. Feature Importance bar chart
+sorted_idx = np.argsort(feature_importance)[::-1]
+top_n = 10
+axes[1, 0].barh(range(top_n), feature_importance[sorted_idx][:top_n])
+axes[1, 0].set_yticks(range(top_n))
+axes[1, 0].set_yticklabels([feature_names[i] for i in sorted_idx[:top_n]])
+axes[1, 0].invert_yaxis()
+axes[1, 0].set_xlabel('Importance Score')
+axes[1, 0].set_title("Top 10 Feature Importances", fontsize=14, fontweight='bold')
+
+# 4. Accuracy comparison
+accuracy_data = [train_accuracy, test_accuracy]
+axes[1, 1].bar(['Training', 'Testing'], accuracy_data, color=['#2E86AB', '#A23B72'])
+axes[1, 1].set_ylabel('Accuracy')
+axes[1, 1].set_ylim([0, 1.1])
+axes[1, 1].set_title("Training vs Testing Accuracy", fontsize=14, fontweight='bold')
+for i, v in enumerate(accuracy_data):
+    axes[1, 1].text(i, v + 0.02, f'{v:.4f}', ha='center', fontweight='bold')
+
+plt.tight_layout()
+plt.show()
+
+print("\nVisualization complete!")
 ```
 
 3. Install dependencies:
