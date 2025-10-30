@@ -1,4 +1,4 @@
-# Assignment Title
+# Assignment 2
 
 [![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -219,9 +219,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 **Your Name**
-- Email: your.email@example.com
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- Email: jkagyenfraasare@aggies.ncat.edu
+- GitHub: [@yourusername](https://github.com/Agyenfra)
+- LinkedIn: [Your Profile](linkedin.com/in/joshua-kofi-agyenfra-asare-716402118)
 
 ---
 
