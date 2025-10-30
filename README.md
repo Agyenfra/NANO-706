@@ -221,7 +221,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Your Name**
 - Email: jkagyenfraasare@aggies.ncat.edu
 - GitHub: [@yourusername](https://github.com/Agyenfra)
-- LinkedIn: [Your Profile](linkedin.com/in/joshua-kofi-agyenfra-asare-716402118)
+- LinkedIn: [Your Profile](http.linkedin.com/in/joshua-kofi-agyenfra-asare-716402118)
 
 ---
 
