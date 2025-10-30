@@ -3,11 +3,10 @@
 [![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This assignment is in 2 folds. The first one lablled as HW1 and the second lablled as HW2. In HW1 we were to use a wine dataset to create a decison tree. 
+This assignment is in 2 folds. The first one labelled as HW1 and the second labelled as HW2. In HW1 we were to use a wine dataset to create a decison tree. 
 HW1 helps use to analyse a dataset by predicting and evaluating a model using python. It further uses a decison tree in evaluating a dataset.
 In HW2 we were to train a model, analyse the model and set up an enironment to visualize using yolov5.
 
-A brief, one-paragraph description of what this assignment accomplishes. Mention the main problem it solves or the concept it demonstrates.
 
 ## Table of Contents
 
@@ -25,7 +24,7 @@ A brief, one-paragraph description of what this assignment accomplishes. Mention
 
 ## Overview
 
-For HW1 the first part was to toad a wine dataet and to visualize the data using a scatter plot.
+For HW1 the first part was to load a wine dataet and to visualize the data using a scatter plot.
 The second part was to use the dataset to create a model and evaluate the model. After training a data set of 124 with a testing set of 54, I obtained a training accuracy of 0.9839 and a testing acuracy of 1.
 I was able to generate a classification report, confusion matrix and feature importance graph. All these were plotted on a graph to make inferences.
 Provide a more detailed explanation of the assignment. Include:
@@ -192,8 +191,8 @@ python -m pytest tests/ -v
 
 ## Known Issues
 
-- Issue 1: Description and potential workaround
-- Issue 2: Description and potential workaround
+- Issue 1: Defining models can be a challenge. Make sure models are well defined.
+- Issue 2: Libraries need to be run from the top for some codes to work.
 
 ## Future Improvements
 
