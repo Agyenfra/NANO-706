@@ -47,7 +47,13 @@ Provide a more detailed explanation of the assignment. Include:
   - NumPy - for numerical computations
   - Pandas - for data manipulation
   - Matplotlib - for data visualization
-- **Tools**: Git, VS Code
+  - Seaborn - for statistical graphs
+  - Scikit-learn (sklearn) - for machine learning
+  - Graphviz - for data visualization
+  - Pydot - for visualizing data
+  - Pytorch - for machine learning libraries
+  - CV2 - for openCV library
+- **Tools**: Git, Jupyter notebook
 
 ## Installation
 
