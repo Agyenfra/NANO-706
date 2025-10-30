@@ -25,6 +25,9 @@ A brief, one-paragraph description of what this assignment accomplishes. Mention
 
 ## Overview
 
+For HW1 the first part was to toad a wine dataet and to visualize the data using a scatter plot.
+The second part was to use the dataset to create a model and evaluate the model. After training a data set of 124 with a testing set of 54, I obtained a training accuracy of 0.9839 and a testing acuracy of 1.
+I was able to generate a classification report, confusion matrix and feature importance graph. All these were plotted on a graph to make inferences.
 Provide a more detailed explanation of the assignment. Include:
 - The course name and assignment number
 - The learning objectives
