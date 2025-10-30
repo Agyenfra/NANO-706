@@ -350,12 +350,92 @@ print("\nFeature importance plot saved as 'feature_importance.png'")
 plt.show()
 ```
 
-## Usage
+## HW2
 
-Provide clear instructions on how to run your code:
+Train and evaluate logistic model, Yolov5:
 
 ```bash
-python main.py
+from PIL import Image  # Import the Image module from Pillow
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import fetch_openml
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+from sklearn.neural_network import MLPClassifier
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPClassifier
+
+# Load the MNIST dataset
+mnist = fetch_openml('mnist_784', version=1)
+X, y = mnist['data'], mnist['target']
+
+# Preprocess the Data
+X = X / 255.0  # Normalize pixel values to [0, 1]
+y = y.astype(np.uint8)  # Convert labels to integers
+
+#  Split the Data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the data for SVM
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Train Different Classifiers
+
+# 1. Random Forest
+rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
+rf_classifier.fit(X_train, y_train)
+y_pred_rf = rf_classifier.predict(X_test)
+accuracy_rf = accuracy_score(y_test, y_pred_rf)
+
+logisticRegression = LogisticRegression().fit(X_train, y_train)
+y_pred_logistic = logisticRegression.predict(X_test)
+accuracy_logistic = accuracy_score(y_test, y_pred_logistic)
+
+
+# --- STEP 0: Prepare sample data (you would use your own data here) ---
+X, y = make_classification(n_samples=100, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=1)
+
+# --- STEP 1: Load the MLP model ---
+# Create an instance of the MLPClassifier with desired settings
+# (hidden_layer_sizes, activation, solver, etc.)
+mlp = MLPClassifier(hidden_layer_sizes=(10, 10), max_iter=1000, random_state=42)
+
+# --- STEP 2: Fit the model to your training data ---
+mlp.fit(X_train, y_train)
+
+# Now your model is trained and ready for predictions
+# For example, to print the training accuracy:
+print(f"Training accuracy: {mlp.score(X_train, y_train):.2f}")
+
+y_pred_mlp = mlp.predict(X_test)
+accuracy_mlp = accuracy_score(y_test, y_pred_mlp)
+
+# Step 6: Print Accuracy Results
+print(f'Logistic Regression: {accuracy_logistic * 100:.2f}%')
+print(f'Random Forest Accuracy: {accuracy_rf * 100:.2f}%')
+print(f'MLP Accuracy: {accuracy_mlp * 100:.2f}%')
+
+# Set up the environment
+!git clone https://github.com/ultralytics/yolov5  # Clone the YOLOv5 repo
+%cd yolov5
+!pip install -r requirements.txt  # Install requirements
+
+# Import libraries
+import torch
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load a pre-trained YOLOv5 model
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # Load YOLOv5s model (small)
 ```
 
 Or with command-line arguments:
