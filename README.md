@@ -62,8 +62,46 @@ I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used
 
 1. Load dataset and viualize scatter plot:
 ```bash
-git clone https://github.com/yourusername/assignment-name.git
-cd assignment-name
+# Load the Wine Quality dataset
+wine = datasets.load_wine()
+X = wine.data  # Features
+Y = wine.target  # Target variable (wine quality)
+
+# Create a DataFrame for better visualization
+wine_df = pd.DataFrame(X, columns=wine.feature_names)
+wine_df['target'] = Y
+
+# Display the feature names
+print("Feature names:", wine.feature_names)
+# Display the first few rows of the dataset
+wine_df.head()
+# Visualize the data
+plt.figure(figsize=(10, 6))
+plt.scatter(wine_df['alcohol'], wine_df['malic_acid'], c=wine_df['target'], cmap='coolwarm', s=30)
+
+plt.title(f"Wine Quality Dataset")
+plt.xlabel('alcohol') 
+plt.ylabel('malic_acid')
+plt.colorbar(ticks=np.unique(Y), label='Quality')
+plt.show()
+
+# Standardize features
+scaler = StandardScaler()
+X2 = scaler.fit_transform(X)
+
+# Split the data
+
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=42)
+
+# Train SVM
+svm = SVC(kernel='linear')
+svm.fit(X_train, Y_train)  
+
+Y_pred = svm.predict(X_test)
+
+# Make predictions and calculate accuracy
+accuracy = accuracy_score(Y_test , Y_pred)
+print(f"Accuracy of the SVM model: {accuracy:.2f}")
 ```
 
 2. Create a virtual environment (optional but recommended):
