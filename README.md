@@ -219,17 +219,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Course: [NANO 706 - System and Computational BIOL]
-- Instructor: [Prof Sam Oliviera]
-- Institution: [North Carolina A & T University]
-- Semester: [Fall 2025]
+- Course: NANO 706 - System and Computational BIOL
+- Instructor: Prof Sam Oliviera
+- Institution: North Carolina A & T University
+- Semester: Fall 2025
 
 ## Contact
 
 **Your Name**
 - Email: jkagyenfraasare@aggies.ncat.edu
-- GitHub: [https://github.com/Agyenfra]
-- LinkedIn: [http.linkedin.com/in/joshua-kofi-agyenfra-asare-716402118]
+- GitHub: https://github.com/Agyenfra
+- LinkedIn: http://linkedin.com/in/joshua-kofi-agyenfra-asare-716402118
 
 ---
 
