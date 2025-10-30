@@ -31,10 +31,10 @@ I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used
 
 ## Features
 
-- ✨ Feature 1: Brief description
-- 🚀 Feature 2: Brief description
-- 🎯 Feature 3: Brief description
-- 📊 Feature 4: Brief description
+- ✨ HW1 Feature 1: Load dataset and viualize scatter plot
+- 🚀 HW1 Feature 2: Train and evaluate model
+- 🎯 HW1 Feature 3: Classification report, Confusinon Matrix, Feature Importance graph. 
+- 📊 HW2 Feature 4: Train and evaluate logistic model, Yolov5
 
 ## Technologies Used
 
