@@ -25,7 +25,7 @@ In HW2 I created a model in python, trained the model, analysed the model and se
 
 -For HW1 the first part was to load a wine dataet and to visualize the data using a scatter plot.
 The second part was to use the dataset to create a model and evaluate the model. After training a data set of 124 with a testing set of 54, I obtained a training accuracy of 0.9839 and a testing acuracy of 1.
--I was able to generate a classification report, confusion matrix and feature importance graph. All these were plotted on a graph to make inferences.
+-I was able to generate a Logistic regression with classification report, confusion matrix and feature importance graph. All these were plotted on a graph to make inferences.
 -For HW2, I uploaded a MNIST dataset and trained a SVM on it. I also loaded and trained a MLP model for logistic regression and MLP Classifier. The training accuracy was 1. The logistic regreesion scored a 92.03%, Random Forest Accuracy was 96.71% and MLP Accuracy was 88.00%.
 I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used for predicting the bounding boxes and class probabilities of objects in input images.
 
@@ -33,7 +33,7 @@ I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used
 
 - ✨ HW1 Feature 1: Load dataset and viualize scatter plot
 - 🚀 HW1 Feature 2: Prediction and Evaluation
-- 🎯 HW1 Feature 3: Classification report, Confusinon Matrix, Feature Importance graph. 
+- 🎯 HW1 Feature 3: Logistic Regression 
 - 📊 HW2 Feature 4: Train and evaluate logistic model, Yolov5
 
 ## Technologies Used
@@ -221,9 +221,133 @@ plt.show()
 print("\nVisualization complete!")
 ```
 
-3. Install dependencies:
+3. Logistic Regression:
 ```bash
-pip install -r requirements.txt
+import numpy as np
+import pandas as pd
+from sklearn.datasets import load_wine
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import matplotlib.pyplot as plt
+
+# Load the wine dataset
+wine = load_wine()
+X = wine.data
+y = wine.target
+
+# Create a DataFrame for better visualization
+df = pd.DataFrame(X, columns=wine.feature_names)
+df['target'] = y
+
+print("Dataset Shape:", X.shape)
+print("\nFeature Names:", wine.feature_names)
+print("\nTarget Classes:", wine.target_names)
+print("\nFirst few rows:")
+print(df.head())
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42, stratify=y
+)
+
+# Scale the features for logistic regression
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# ========== LOGISTIC REGRESSION ==========
+print("\n" + "="*50)
+print("LOGISTIC REGRESSION MODEL")
+print("="*50)
+
+# Train logistic regression model
+log_reg = LogisticRegression(max_iter=1000, random_state=42)
+log_reg.fit(X_train_scaled, y_train)
+
+# Make predictions
+y_pred_lr = log_reg.predict(X_test_scaled)
+
+# Evaluate the model
+print("\nAccuracy:", accuracy_score(y_test, y_pred_lr))
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred_lr, target_names=wine.target_names))
+print("\nConfusion Matrix:")
+print(confusion_matrix(y_test, y_pred_lr))
+
+# ========== DECISION TREE ==========
+print("\n" + "="*50)
+print("DECISION TREE MODEL")
+print("="*50)
+
+# Train decision tree model (no scaling needed)
+dt_classifier = DecisionTreeClassifier(max_depth=4, random_state=42)
+dt_classifier.fit(X_train, y_train)
+# Make predictions
+y_pred_dt = dt_classifier.predict(X_test)
+
+# Evaluate the model
+print("\nAccuracy:", accuracy_score(y_test, y_pred_dt))
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred_dt, target_names=wine.target_names))
+print("\nConfusion Matrix:")
+print(confusion_matrix(y_test, y_pred_dt))
+
+# ========== VISUALIZATIONS ==========
+# Plot Decision Tree
+plt.figure(figsize=(20, 10))
+plot_tree(dt_classifier, 
+          feature_names=wine.feature_names,
+          class_names=wine.target_names,
+          filled=True,
+          rounded=True,
+          fontsize=10)
+plt.title("Decision Tree Visualization", fontsize=16, pad=20)
+plt.tight_layout()
+plt.savefig('decision_tree.png', dpi=300, bbox_inches='tight')
+print("\nDecision tree visualization saved as 'decision_tree.png'")
+plt.show()
+
+# Compare model accuracies
+models = ['Logistic Regression', 'Decision Tree']
+accuracies = [
+    accuracy_score(y_test, y_pred_lr),
+    accuracy_score(y_test, y_pred_dt)
+]
+
+plt.figure(figsize=(10, 6))
+plt.bar(models, accuracies, color=['#1f77b4', '#ff7f0e'])
+plt.ylabel('Accuracy', fontsize=12)
+plt.title('Model Comparison', fontsize=14)
+plt.ylim(0, 1.0)
+for i, v in enumerate(accuracies):
+    plt.text(i, v + 0.02, f'{v:.3f}', ha='center', fontsize=11)
+plt.tight_layout()
+plt.savefig('model_comparison.png', dpi=300, bbox_inches='tight')
+print("Model comparison saved as 'model_comparison.png'")
+plt.show()
+
+# Feature importance from Decision Tree
+feature_importance = pd.DataFrame({
+    'feature': wine.feature_names,
+    'importance': dt_classifier.feature_importances_
+}).sort_values('importance', ascending=False)
+
+print("\n" + "="*50)
+print("FEATURE IMPORTANCE (Decision Tree)")
+print("="*50)
+print(feature_importance)
+
+plt.figure(figsize=(10, 6))
+plt.barh(feature_importance['feature'], feature_importance['importance'])
+plt.xlabel('Importance', fontsize=12)
+plt.title('Feature Importance from Decision Tree', fontsize=14)
+plt.tight_layout()
+plt.savefig('feature_importance.png', dpi=300, bbox_inches='tight')
+print("\nFeature importance plot saved as 'feature_importance.png'")
+plt.show()
 ```
 
 ## Usage
