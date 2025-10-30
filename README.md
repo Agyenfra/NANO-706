@@ -3,7 +3,7 @@
 [![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This assignment is in 2 folds. The first one labelled as HW1 and the second labelled as HW2. In HW1 I analysed a a wine dataset using a model in python. I also predicted and evaluated the model's precison and accuracy. Finally I used python  create a decison tree and a confusion matrix.
+This assignment is in 2 folds. The first one labelled as HW1 and the second labelled as HW2. In HW1 I analysed a wine dataset using a model in python. I also predicted and evaluated the model's precison and accuracy. Finally I used python to create a decison tree and a confusion matrix.
 In HW2 I created a model in python, trained the model, analysed the model and set up an enironment to visualize my image using yolov5.
 
 
@@ -24,7 +24,10 @@ In HW2 I created a model in python, trained the model, analysed the model and se
 ## Overview
 
 For HW1 the first part was to load a wine dataet and to visualize the data using a scatter plot.
-The second part was to use the dataset to create a model and evaluate the model. After training a data set of 124 with a testing set of 54, I obtained a training accuracy of 0.9839 and a testing acuracy of 1. I was able to generate a Logistic regression with classification report, confusion matrix and feature importance graph. All these were plotted on a graph to make inferences.For HW2, I uploaded a MNIST dataset and trained a SVM on it. I also loaded and trained a MLP model for logistic regression and MLP Classifier. The training accuracy was 1. The logistic regreesion scored a 92.03%, Random Forest Accuracy was 96.71% and MLP Accuracy was 88.00%. I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used for predicting the bounding boxes and class probabilities of objects in input images.
+The second part was to use the dataset to create a model and evaluate the model. 
+After training a data set of 124 with a testing set of 54, I obtained a training accuracy of 0.9839 and a testing acuracy of 1. 
+I was able to generate a Logistic regression with classification report, confusion matrix and feature importance graph. All these were plotted on a graph to make inferences.
+For HW2, I uploaded a MNIST dataset and trained a SVM on it. I also loaded and trained a MLP model for logistic regression and MLP Classifier. The training accuracy was 1. The logistic regreesion scored a 92.03%, Random Forest Accuracy was 96.71% and MLP Accuracy was 88.00%. I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used for predicting the bounding boxes and class probabilities of objects in input images.
 
 ## Features
 
