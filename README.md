@@ -352,7 +352,7 @@ plt.show()
 
 ## Results
 
-Train and evaluate logistic model, Yolov5:
+Logistic Regression and Decision Tree:
 
 ```bash
 Dataset Shape: (178, 13)
