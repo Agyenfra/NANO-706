@@ -434,17 +434,9 @@ Decision tree visualization saved as 'decision_tree.png'
 ```
 
 Images:
+<img width="953" height="637" alt="Snip_TEMP0001" src="https://github.com/user-attachments/assets/5279b974-55b1-4487-99c8-efd517943dbd" />
 
-```bash
-<    <img width="953" height="637" alt="Snip_TEMP0001" src="https://github.com/user-attachments/assets/1fbeaebd-9931-4154-a423-e3fb51913154" />
-" />
 
-<img width="953" height="367" alt="image" src="https://github.com/user-attachments/assets/19f6012d-fe16-449d-b322-556d15c98d25" />
-
-<img width="953" height="645" alt="image" src="https://github.com/user-attachments/assets/465ae530-489a-4b83-906b-6b814ac9b1c2" />
-
-<img width="953" height="531" alt="image" src="https://github.com/user-attachments/assets/470783dc-1bc6-45bd-9136-842f78ada4bf" />
-```
 
 ### HW2 
 
