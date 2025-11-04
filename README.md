@@ -103,7 +103,7 @@ I was also able to generate a Logistic regression with classification report, co
 
 <img width="921" height="670" alt="Snip_TEMP0001-13" src="https://github.com/user-attachments/assets/1ef16646-2c1f-49f3-a438-81dbb1357e87" />
 
-
+<img width="875" height="670" alt="Snip_TEMP0001-3" src="https://github.com/user-attachments/assets/95cb3478-b0c0-4d4f-b283-a5c58c0cd44c" />
 
 3. Logistic Regression:
 
@@ -119,9 +119,6 @@ I was also able to generate a Logistic regression with classification report, co
  
 
 Images:
-
-
-<img width="875" height="670" alt="Snip_TEMP0001-3" src="https://github.com/user-attachments/assets/95cb3478-b0c0-4d4f-b283-a5c58c0cd44c" />
 
 <img width="775" height="670" alt="Snip_TEMP0001-5" src="https://github.com/user-attachments/assets/adffdb56-dac8-42e3-8f7d-e6ae667b941a" />
 
