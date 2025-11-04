@@ -548,11 +548,9 @@ plt.show()
 ```
 
 ## Image
+<img width="758" height="670" alt="Snip_TEMP0001-2" src="https://github.com/user-attachments/assets/e7a4f1a4-50c7-4d30-bdcd-fd4178063f28" />
 
-```
-<img width="1462" height="1296" alt="image" src="https://github.com/user-attachments/assets/9a11cd80-c8c4-418f-9b94-eb739f938f95" />
 
-```
 
 
 ## Assignment Requirements
