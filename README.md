@@ -436,7 +436,8 @@ Decision tree visualization saved as 'decision_tree.png'
 Images:
 
 ```bash
-<img width="953" height="402" alt="image" src="https://github.com/user-attachments/assets/86295236-6915-4034-a737-cef1be597721" />
+<    <img width="953" height="637" alt="Snip_TEMP0001" src="https://github.com/user-attachments/assets/1fbeaebd-9931-4154-a423-e3fb51913154" />
+" />
 
 <img width="953" height="367" alt="image" src="https://github.com/user-attachments/assets/19f6012d-fe16-449d-b322-556d15c98d25" />
 
