@@ -73,6 +73,10 @@ I was also able to generate a Logistic regression with classification report, co
 
 
 
+<img width="953" height="637" alt="Snip_TEMP0001" src="https://github.com/user-attachments/assets/5279b974-55b1-4487-99c8-efd517943dbd" />
+
+
+
 2. Prediction and Evaluation:
 
 ```bash
@@ -116,7 +120,6 @@ I was also able to generate a Logistic regression with classification report, co
 
 Images:
 
-<img width="953" height="637" alt="Snip_TEMP0001" src="https://github.com/user-attachments/assets/5279b974-55b1-4487-99c8-efd517943dbd" />
 
 <img width="875" height="670" alt="Snip_TEMP0001-3" src="https://github.com/user-attachments/assets/95cb3478-b0c0-4d4f-b283-a5c58c0cd44c" />
 
