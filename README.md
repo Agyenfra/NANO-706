@@ -442,6 +442,9 @@ Images:
 
 <img width="764" height="670" alt="Snip_TEMP0001-6" src="https://github.com/user-attachments/assets/7ba7f5e6-c38d-4e6d-a38c-45b2f675dbfe" />
 
+<img width="953" height="641" alt="Snip_TEMP0001-7" src="https://github.com/user-attachments/assets/40e93aad-d0a1-4454-83fa-30ca1d700396" />
+
+
 
 ### HW2 
 
