@@ -95,9 +95,12 @@ Images:
 
 ### HW2 
 
-I uploaded a MNIST dataset and trained a SVM on it. I also loaded and trained a MLP model for logistic regression and MLP Classifier. 
-The training accuracy was 1. The logistic regreesion scored a 92.03%, Random Forest Accuracy was 96.71% and MLP Accuracy was 88.00%. 
-I set an environment for yolov5. Yolov5 was downloaded from ultralytics and used for predicting the bounding boxes 
+I uploaded a MNIST dataset and trained a SVM on it. 
+I also loaded and trained a MLP model for logistic regression and MLP Classifier. 
+The training accuracy was 1. 
+The logistic regreesion scored a 92.03%, Random Forest Accuracy was 96.71% and MLP Accuracy was 88.00%. 
+I set an environment for yolov5. 
+Yolov5 was downloaded from ultralytics and used for predicting the bounding boxes 
 and class probabilities of objects in input images. 
 Yolov5 was able to identify my picture as a person and also a car behind me. 
 
