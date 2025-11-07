@@ -68,7 +68,8 @@ The second part was to use the dataset to create a model and evaluate the model.
 The dataset for the logistic regression was to build a statistical model to predict the probability of a
 wine belonging to a specific quality category based on its chemical properties.
 This task was to classify the wine datasets based on their chemical properties.
-After training a data set of 124 with a testing set of 54, I obtained a training accuracy of 0.9839 and a testing acuracy of 1. 
+After training a data set of 124 with a testing set of 54, I obtained a training accuracy of 0.9839
+and a testing acuracy of 1. 
 
 ```
 
@@ -79,7 +80,8 @@ After training a data set of 124 with a testing set of 54, I obtained a training
 
 
 ```bash
-# I was also able to generate a Logistic regression with classification report, confusion matrix and feature importance graph. The pictures of the graphs are attached.
+# I was also able to generate a Logistic regression with classification report, confusion matrix and feature importance graph.
+
 ```
  
 
